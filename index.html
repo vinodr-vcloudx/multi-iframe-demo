@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fedo.ai Iframe Demo</title>
+</head>
+
+<body>
+  <div id="app" class="w-screen h-screen">
+    <iframe src="https://vite.dev/guide/api-environment-plugins.html" class="w-full h-full" id="iframe-first"></iframe>
+    <!-- Widget open button -->
+    <div
+      class="absolute grid w-16 h-16 p-3 text-white bg-red-500 rounded-full cursor-pointer bottom-5 right-5 place-content-center  shadow-xl"
+      id="widget-button" title="Click to open a widget">
+      <svg class="animate-pulse" width="32" height="32" viewBox="0 0 24 24" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M2.5 6.09143L7.21997 10.8114L12.0005 6.03088L16.7811 10.8114L21.5 6.09245V14.9691C21.5 16.626 20.1569 17.9691 18.5 17.9691H5.5C3.84314 17.9691 2.5 16.626 2.5 14.9691V6.09143ZM19.5 10.9087V14.9691C19.5 15.5214 19.0523 15.9691 18.5 15.9691H5.5C4.94771 15.9691 4.5 15.5214 4.5 14.9691V10.9077L7.21997 13.6277L12.0005 8.84717L16.7811 13.6277L19.5 10.9087Z"
+          fill="currentColor" />
+      </svg>
+    </div>
+    <!-- / Widget open button -->
+
+    <div id="widget-modal" class="absolute inset-0 hidden transition-opacity opacity-0 pointer-events-none ">
+      <div class="absolute inset-0 transition-opacity bg-gray-500 bg-opacity-75"></div>
+      <div class="absolute text-white bg-red-600 rounded-full cursor-pointer right-2 top-2" id="close-modal">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16.3394 9.32245C16.7434 8.94589 16.7657 8.31312 16.3891 7.90911C16.0126 7.50509 15.3798 7.48283 14.9758 7.85938L12.0497 10.5866L9.32245 7.66048C8.94589 7.25647 8.31312 7.23421 7.90911 7.61076C7.50509 7.98731 7.48283 8.62008 7.85938 9.0241L10.5866 11.9502L7.66048 14.6775C7.25647 15.054 7.23421 15.6868 7.61076 16.0908C7.98731 16.4948 8.62008 16.5171 9.0241 16.1405L11.9502 13.4133L14.6775 16.3394C15.054 16.7434 15.6868 16.7657 16.0908 16.3891C16.4948 16.0126 16.5171 15.3798 16.1405 14.9758L13.4133 12.0497L16.3394 9.32245Z"
+            fill="currentColor" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z"
+            fill="currentColor" />
+        </svg>
+      </div>
+      <div
+        class="inline-block lg:w-1/2 lg:h-[80%] overflow-hidden text-left align-bottom transition-all bg-white rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-lg w-[80%] h-[80%] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute">
+        <iframe src="https://react.dev/learn" class="w-full h-full" id="iframe-second"></iframe>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
